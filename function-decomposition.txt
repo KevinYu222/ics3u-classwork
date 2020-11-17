@@ -24,17 +24,40 @@ Vending machine functional decomposition from a machine perspective
 -------------------------------------------------------------------
 
 Getting a bag of chips out of the machine
+    - Get the number for the bag of chips sending out
+        - receive input from the button pressed by the costumer
+        - match the input number with the proper roll
     - Receive money input from the customer
         - if the money is received from the paper money slot
             - take in the paper money
             - determine if the money is valid
             - if the money is valid
                 - determine the amount of money from the size of the paper money
+                - Store the amount of money
             - if the money is invalid
                 - sent the money out of the slot
         - if the money is received from the coin slot
             - take in the coin
             - determine if the coin is proper
-            - 
-    - Get the number for the bag of chips sending out
+            - if the coin is valid
+                - determine the amount of money based on the size of the coins
+                - Store the amount of money
+            - if the coin is invalid
+                - send coin back to the returning slot
+        - Check if the money required from that roll of chips is less or equal than the money stored
+        - if it is
+            - Check if the roll is empty with mechanical pusher
+                - If the roll is empty
+                    - Ask costumer to select new number
+                - If the roll is not empty
+                    - Push out the bag of chips
+        - if it isn't
+            - Wait for more money to insert
+        - Repeat process until user choose to return money
+            - Return paper money through Paper slot
+            - Return coin through coin slot
     - Send out the chips
+        - Open the lower slot for the costumer to reach the chips
+    
+---------------------------------------------------------------------------------------------------------------
+
