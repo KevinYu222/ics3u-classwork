@@ -1,6 +1,6 @@
-#Functional Decomposition
+Functional Decomposition
 
-##Vending machine from a human perspective
+Vending machine from a human perspective
 -------------------------------------------
 
 You geta bag of chips from a vending machine
