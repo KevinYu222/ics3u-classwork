@@ -3,7 +3,7 @@ Functional Decomposition
 Vending machine from a human perspective
 -------------------------------------------
 
-You geta bag of chips from a vending machine
+You get a bag of chips from a vending machine
     - Approach machine.
         - Wal until you are within arm reach.
     - Determine the number for the bag I want.
@@ -20,3 +20,21 @@ You geta bag of chips from a vending machine
         - Grab chips
         - Pull your arm out (with the chips)
 
+Vending machine functional decomposition from a machine perspective
+-------------------------------------------------------------------
+
+Getting a bag of chips out of the machine
+    - Receive money input from the customer
+        - if the money is received from the paper money slot
+            - take in the paper money
+            - determine if the money is valid
+            - if the money is valid
+                - determine the amount of money from the size of the paper money
+            - if the money is invalid
+                - sent the money out of the slot
+        - if the money is received from the coin slot
+            - take in the coin
+            - determine if the coin is proper
+            - 
+    - Get the number for the bag of chips sending out
+    - Send out the chips
