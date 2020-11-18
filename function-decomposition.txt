@@ -60,4 +60,13 @@ Getting a bag of chips out of the machine
         - Open the lower slot for the costumer to reach the chips
     
 ---------------------------------------------------------------------------------------------------------------
-
+Identify where there might be basic programming concepts in your break-down above
+- A basic command
+    - button pressed for the number of the chips
+    - pushing the corresponding chips out
+    - receiving the money
+- Conditional Branching
+    - Check if the money is valid and different condition based on if the money is valid
+    - Whether send out the chips based on the condition of money and chips.
+- loop
+    - 
