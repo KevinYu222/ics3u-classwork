@@ -102,4 +102,6 @@ The spoon dropped into the gravy
     How can you prevent this problem?
         - Put the spoon on the side instead of in the gravy.
     How can this problem be solved with a robotic system?
-
+        - Robotic spoon that have sensor around.
+        - If gravy reach a certain level
+        - Push the spoon out of the bowl
