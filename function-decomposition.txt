@@ -98,6 +98,8 @@ The cookie is too big for the glass
 The spoon dropped into the gravy
     How do you fix this problem?
         - Pick out the spoon from the gravy.
+        - Clean the spoon
     How can you prevent this problem?
+        - Put the spoon on the side instead of in the gravy.
     How can this problem be solved with a robotic system?
 
