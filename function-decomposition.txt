@@ -69,4 +69,35 @@ Identify where there might be basic programming concepts in your break-down abov
     - Check if the money is valid and different condition based on if the money is valid
     - Whether send out the chips based on the condition of money and chips.
 - loop
-    - 
+    - Match the number inputed with the correct chip in sequence
+    - Check the money stored with the money required in sequence
+- Nested sequence
+    - The conditional branching within the loop for the machine to only give out chips if there are enough money stored
+--------------------------------------------------------------------------------------------------------------------------    
+
+The cookie is too big for the glass
+    How do you fix this problem?
+        - Break the cookie apart
+            - pull the cookie out of the glass
+            - hold opposite sides of the cookie
+            - use hands to take apart the cookie
+        - Put the smaller pieces into the glass of milk one by one
+    How can you prevent this problem?
+        - Pull more milk into the glasses so the cookie can reach it.
+        - Find glass with wider opening than the width of the cookie
+        - Get smaller cookies for the glass of milk
+        - Split cookies into smaller chunks
+    How can this problem be solved with an app?
+        - A scanner app that intake the width of the cookie
+        - Intake the width of the glass opening
+        - If the width of the cookie is more or equal to the width of the glass:
+            - Break cookie apart
+        - Else
+            - Good to go
+-------------------------------------------------------------------------------------------
+The spoon dropped into the gravy
+    How do you fix this problem?
+    
+    How can you prevent this problem?
+    How can this problem be solved with a robotic system?
+
