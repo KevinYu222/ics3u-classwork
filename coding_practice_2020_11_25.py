@@ -15,19 +15,17 @@ while True:
 
 # Exercise 44
 print("Check for fixed Holiday")
-valid_month = "january feburary march april".split(" ")
-print(valid_month)
 while True:
     month = input("Month: ").lower
     day = int(input("Day: "))
 
-    if month == "January" and day == 1:
+    if month == "january" and day == 1:
         print("It's New Year's Day")
         break
-    elif month == "July" and day == 1:
+    elif month == "july" and day == 1:
         print("It's Canada's Day")
         break
-    elif month == "December" and day == 25:
+    elif month == "december" and day == 25:
         print("It's Christmas Day")
         break
     else:
