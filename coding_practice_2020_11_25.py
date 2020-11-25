@@ -81,20 +81,51 @@ while True:
     else:
         print("There is no fixed holiday that day.")
         
-# Exercise 38
-months = "january feburary march april may june july august september october november december".split(" ")
-while True:
-    month = input("Enter the month here: ").lower()
-   
-    if month == months[0] or month == months[2] or month == months[4] or month == months[6] or month == months[7] or month == months[9] or month == months[11]:
-        print(f"{month} has 31 days")
-    elif month == months[1]:
-        print(f"{month} has 28 or 29 days.")
-    else:
-        if month not in months:
-            print("Not a month.")
-        else:
-            print(f"{month} has 30 days.")
+#Exercise38
+a = ["January", "March", "May", "July", "August", "October", "December"]
+user_month = input("Enter a month: ")
+if user_month in a:
+  print("It has 31 days.")
+elif user_month == "Febuary":
+  print("It has 28 or 29 days.")
+else:
+  print("It has 30 days.")
+
+#Exercise39
+decibal = int(input("How loud is it? "))
+if decibal > 130:
+  print("It is way too loud!")
+elif decibal < 40:
+  print("Shhh, it's too quiet.")
+elif decibal <= 130 and decibal > 106:
+  if decibal == 130:
+    print("Jackhammer.")
+  else:
+    print("Between Jackhammer and gas lawnmover.")
+elif decibal <= 106 and decibal > 70:
+  if decibal == 106:
+    print("Gas lawnmover.")
+  else:
+    print("Between gas lawnmover and alarm clock.")
+elif decibal <= 70 and decibal >= 40:
+  if decibal == 70:
+    print("Alarm clock.")
+  elif decibal == 40:
+    print("Quiet room.")
+  else:
+    print("Between the alarm clock and a quiet room.")
+
+#Exercise40
+side1 = int(input("Enter the side length: "))
+side2 = int(input("Enter the side length: "))
+side3 = int(input("Enter the side length: "))
+if side1 == side2 and side2 == side3:
+  triangle = "equalateral"
+elif side1 != side2 and side1 != side3 and side2 != side3:
+  triangle = "scalene"
+else:
+  triangle = "isoceles"
+print (f"This is a {triangle} triangle.")
 
 # Exercise 45
 location = input("Enter position: ").lower()
