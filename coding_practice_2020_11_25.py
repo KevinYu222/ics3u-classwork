@@ -81,3 +81,45 @@ while True:
     else:
         print("There is no fixed holiday that day.")
         
+# Exercise 38
+months = "january feburary march april may june july august september october november december".split(" ")
+while True:
+    month = input("Enter the month here: ").lower()
+   
+    if month == months[0] or month == months[2] or month == months[4] or month == months[6] or month == months[7] or month == months[9] or month == months[11]:
+        print(f"{month} has 31 days")
+    elif month == months[1]:
+        print(f"{month} has 28 or 29 days.")
+    else:
+        if month not in months:
+            print("Not a month.")
+        else:
+            print(f"{month} has 30 days.")
+
+# Exercise 45
+location = input("Enter position: ").lower()
+if location[0] == "a" or location[0] == "c" or location[0] == "e" or  location[0] == "g":
+    if int(location[1]) % 2 == 1:
+        print("The square is black.")
+    else:
+        print("The square is white.")
+else:
+    if int(location[1]) % 2 == 1:
+        print("The square is white.")
+    else:
+         print("The square is black.")
+
+# Exercise 48:
+zodiac = ["Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger", "Hare", "Dragon", "Snake", "Horse", "Sheep"]
+year = int(input("Enter year: "))
+print(f"This the year of {zodiac[year % 12]}.")
+
+# Exercise 57:
+year = int(input("Enter year: "))
+if year % 400 == 0:
+    print(f"{year} is a leap year.")
+else:
+    if year % 4 == 0:
+        print(f"{year} is a leap year.")
+    else:
+        print(f"{year} is not a leap year.")
