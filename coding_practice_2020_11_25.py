@@ -154,3 +154,38 @@ else:
         print(f"{year} is a leap year.")
     else:
         print(f"{year} is not a leap year.")
+
+# Exercise 58:
+month_list = [4, 6, 9, 11]
+
+year = int(input("Enter year: "))
+month = int(input("Enter month: "))
+day = int(input("Enter date: "))
+
+if day < 30 and month != 2:
+    day += 1
+elif month == 2:
+    if year % 4 == 0:
+        if day == 29:
+            day = 1
+            month += 1
+        else:
+            day += 1
+    else:
+        if day == 28:
+            day = 1
+            month += 1
+elif day == 31:
+    day = 1
+    if month == 12:
+        month = 1
+        year += 1
+    else:
+        month += 1
+elif day == 30:
+    if month in month_list:
+        day = 1
+        month += 1
+    else:
+        day += 1
+print(f"Next day: {year}-{month}-{day}.")
