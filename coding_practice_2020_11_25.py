@@ -60,16 +60,20 @@ while True:
         else:
             print(f"{21 + ((human_years - 2)* 4)} dog years old.")
             break
+            
     except ValueError:
         print("You're suppose to enter a number.")
 
 #Exercise38
 a = ["January", "March", "May", "July", "August", "October", "December"]
 user_month = input("Enter a month: ")
+
 if user_month in a:
   print("It has 31 days.")
+
 elif user_month == "Febuary":
   print("It has 28 or 29 days.")
+
 else:
   print("It has 30 days.")
 
@@ -129,6 +133,7 @@ while True:
 
 # Exercise 45
 location = input("Enter position: ").lower()
+
 if location[0] == "a" or location[0] == "c" or location[0] == "e" or  location[0] == "g":
     if int(location[1]) % 2 == 1:
         print("The square is black.")
@@ -147,6 +152,7 @@ print(f"This the year of {zodiac[year % 12]}.")
 
 # Exercise 57:
 year = int(input("Enter year: "))
+
 if year % 400 == 0:
     print(f"{year} is a leap year.")
 else:
