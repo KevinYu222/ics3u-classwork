@@ -63,24 +63,6 @@ while True:
     except ValueError:
         print("You're suppose to enter a number.")
 
-# Exercise 44
-print("Check for fixed Holiday")
-while True:
-    month = input("Month: ").lower
-    day = int(input("Day: "))
-
-    if month == "january" and day == 1:
-        print("It's New Year's Day")
-        break
-    elif month == "july" and day == 1:
-        print("It's Canada's Day")
-        break
-    elif month == "december" and day == 25:
-        print("It's Christmas Day")
-        break
-    else:
-        print("There is no fixed holiday that day.")
-        
 #Exercise38
 a = ["January", "March", "May", "July", "August", "October", "December"]
 user_month = input("Enter a month: ")
@@ -126,6 +108,24 @@ elif side1 != side2 and side1 != side3 and side2 != side3:
 else:
   triangle = "isoceles"
 print (f"This is a {triangle} triangle.")
+
+# Exercise 44
+print("Check for fixed Holiday")
+while True:
+    month = input("Month: ").lower
+    day = int(input("Day: "))
+
+    if month == "january" and day == 1:
+        print("It's New Year's Day")
+        break
+    elif month == "july" and day == 1:
+        print("It's Canada's Day")
+        break
+    elif month == "december" and day == 25:
+        print("It's Christmas Day")
+        break
+    else:
+        print("There is no fixed holiday that day.")
 
 # Exercise 45
 location = input("Enter position: ").lower()
