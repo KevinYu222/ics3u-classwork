@@ -54,15 +54,19 @@ while True:
         human_years = int(input("Enter human years: "))
         if human_years < 0:
             print("Error")
+
         elif human_years <= 2:
             print(f"{human_years * 10.5} dog years old.")
             break
+
         else:
             print(f"{21 + ((human_years - 2)* 4)} dog years old.")
             break
             
     except ValueError:
         print("You're suppose to enter a number.")
+    
+    print()
 
 #Exercise38
 month_list = ["january", "march", "may", "july", "august", "october", "december"]
@@ -74,7 +78,7 @@ if user_month in month_list:
 elif user_month == "febuary":
   print("It has 28 or 29 days.")
 
-elif user_month not in month_list and user_month != "feburary:
+elif user_month not in month_list and user_month != "feburary":
   print("It has 30 days.")
 
 else:
@@ -85,7 +89,7 @@ decibal = int(input("How loud is it? "))
 if decibal > 130:
   print("It is way too loud!")
 elif decibal < 40:
-  print("Shhh, it's too quiet.")
+  print("Shhh, it's so quiet.")
 elif decibal <= 130 and decibal > 106:
   if decibal == 130:
     print("Jackhammer.")
@@ -105,21 +109,39 @@ elif decibal <= 70 and decibal >= 40:
     print("Between the alarm clock and a quiet room.")
 
 #Exercise40
-side1 = int(input("Enter the side length: "))
-side2 = int(input("Enter the side length: "))
-side3 = int(input("Enter the side length: "))
-if side1 == side2 and side2 == side3:
-  triangle = "equalateral"
-elif side1 != side2 and side1 != side3 and side2 != side3:
-  triangle = "scalene"
-else:
-  triangle = "isoceles"
-print (f"This is a {triangle} triangle.")
+run = True
+length = False
+while run == True:
+    while length == False:
+        side1 = int(input("Enter the side length: "))
+        side2 = int(input("Enter the side length: "))
+        side3 = int(input("Enter the side length: "))
+        if side1 > 0 and side2 > 0 and side3 > 0:
+            length = True
+        else:
+            print("You have invalid input.")
+        print()
+
+    if side1 == side2 and side2 == side3:
+        triangle = "equalateral"
+
+    elif side1 != side2 and side1 != side3 and side2 != side3:
+        triangle = "scalene"
+
+    else:
+        triangle = "isoceles"
+
+    print (f"This is a {triangle} triangle.")
+    
+    again = input("Press enter to go again or type x to exit: ")
+    
+    if again == "x":
+        run = False
 
 # Exercise 44
 print("Check for fixed Holiday")
 while True:
-    month = input("Month: ").lower
+    month = input("Month: ").lower()
     day = int(input("Day: "))
 
     if month == "january" and day == 1:
@@ -133,6 +155,7 @@ while True:
         break
     else:
         print("There is no fixed holiday that day.")
+    
 
 # Exercise 45
 location = input("Enter position: ").lower()
@@ -150,8 +173,54 @@ else:
 
 # Exercise 48:
 zodiac = ["Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger", "Hare", "Dragon", "Snake", "Horse", "Sheep"]
-year = int(input("Enter year: "))
-print(f"This the year of {zodiac[year % 12]}.")
+zodiac_year = True
+while zodiac_year == True:
+    check = False
+    while check == False:
+        year = int(input("Enter year: "))
+        if year > 0:
+            check = True
+        else:
+            print("Invalid input.")
+        print()
+    print(f"This the year of {zodiac[year % 12]}.")
+    again = input("Press enter to go again or type x to exit: ")
+    if again == "x":
+        next_day = False
+
+# Exercise 56:
+receipt = True
+while receipt == True:
+    number = False
+    while number == False:
+        minute = int(input("Enter # of minutes: "))
+        text_message = int(input("Enter # of text messages: "))
+        if minute > 0 and text_message > 0:
+            number = True
+        else:
+            print("You have invalid input.")
+        print()
+    base_charge = 50
+    fee = 0.44
+
+    print(f"Base charge: ${base_charge}")
+
+    if minute > 50:
+        minute = (minute - 50) * 0.25
+        print(f"Additional minute charge: ${round(minute, 2)}")
+
+    if text_message > 50:
+        text_message = (text_message - 50) * 0.15
+        print(f"Additional text message charge: ${round(text_message, 2)}")
+
+    print(f"911 fee charge: ${fee}")
+
+    total = 50 + minute + text_message + 0.44
+    print(f"Tax: ${round((total * 0.05), 2)}")
+    print(f"Total: ${round((total * 1.05),2)}")
+    again = input("Press enter to go again or type x to exit: ")
+    if again == "x":
+        receipt = False
 
 # Exercise 57:
 year = int(input("Enter year: "))
@@ -170,53 +239,36 @@ month_list = [4, 6, 9, 11]
 year = int(input("Enter year: "))
 month = int(input("Enter month: "))
 day = int(input("Enter date: "))
+next_day = True
 
-if day < 30 and month != 2:
-    day += 1
-elif month == 2:
-    if year % 4 == 0:
-        if day == 29:
+while next_day == True:
+    if day < 30 and month != 2:
+        day += 1
+    elif month == 2:
+        if year % 4 == 0:
+            if day == 29:
+                day = 1
+                month += 1
+            else:
+                day += 1
+        else:
+            if day == 28:
+                day = 1
+                month += 1
+    elif day == 31:
+        day = 1
+        if month == 12:
+            month = 1
+            year += 1
+        else:
+            month += 1
+    elif day == 30:
+        if month in month_list:
             day = 1
             month += 1
         else:
             day += 1
-    else:
-        if day == 28:
-            day = 1
-            month += 1
-elif day == 31:
-    day = 1
-    if month == 12:
-        month = 1
-        year += 1
-    else:
-        month += 1
-elif day == 30:
-    if month in month_list:
-        day = 1
-        month += 1
-    else:
-        day += 1
-print(f"Next day: {year}-{month}-{day}.")
-
-# Exercise 56:
-minute = int(input("Enter # of minutes: "))
-text_message = int(input("Enter # of text messages: "))
-base_charge = 50
-fee = 0.44
-
-print(f"Base charge: ${base_charge}")
-
-if minute > 50:
-    minute = (minute - 50) * 0.25
-    print(f"Additional minute charge: ${round(minute, 2)}")
-
-if text_message > 50:
-    text_message = (text_message - 50) * 0.15
-    print(f"Additional text message charge: ${round(text_message, 2)}")
-
-print(f"911 fee charge: ${fee}")
-
-total = 50 + minute + text_message + 0.44
-print(f"Tax: ${round((total * 0.05), 2)}")
-print(f"Total: ${round((total * 1.05),2)}")
+    print(f"Next day: {year}-{month}-{day}.")
+    again = input("Press enter to go again or type x to exit: ")
+    if again == "x":
+        next_day = False
