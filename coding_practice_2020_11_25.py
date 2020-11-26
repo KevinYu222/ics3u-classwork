@@ -189,3 +189,25 @@ elif day == 30:
     else:
         day += 1
 print(f"Next day: {year}-{month}-{day}.")
+
+# Exercise 56:
+minute = int(input("Enter # of minutes: "))
+text_message = int(input("Enter # of text messages: "))
+base_charge = 50
+fee = 0.44
+
+print(f"Base charge: ${base_charge}")
+
+if minute > 50:
+    minute = (minute - 50) * 0.25
+    print(f"Additional minute charge: ${round(minute, 2)}")
+
+if text_message > 50:
+    text_message = (text_message - 50) * 0.15
+    print(f"Additional text message charge: ${round(text_message, 2)}")
+
+print(f"911 fee charge: ${fee}")
+
+total = 50 + minute + text_message + 0.44
+print(f"Tax: ${round((total * 0.05), 2)}")
+print(f"Total: ${round((total * 1.05),2)}")
