@@ -65,17 +65,20 @@ while True:
         print("You're suppose to enter a number.")
 
 #Exercise38
-a = ["January", "March", "May", "July", "August", "October", "December"]
-user_month = input("Enter a month: ")
+month_list = ["january", "march", "may", "july", "august", "october", "december"]
+user_month = input("Enter a month: ").lower()
 
-if user_month in a:
+if user_month in month_list:
   print("It has 31 days.")
 
-elif user_month == "Febuary":
+elif user_month == "febuary":
   print("It has 28 or 29 days.")
 
-else:
+elif user_month not in month_list and user_month != "feburary:
   print("It has 30 days.")
+
+else:
+  print("This is not a month")
 
 #Exercise39
 decibal = int(input("How loud is it? "))
