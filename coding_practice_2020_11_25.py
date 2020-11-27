@@ -110,8 +110,8 @@ elif decibal <= 70 and decibal >= 40:
 
 #Exercise40
 run = True
-length = False
 while run == True:
+    length = False
     while length == False:
         side1 = int(input("Enter the side length: "))
         side2 = int(input("Enter the side length: "))
