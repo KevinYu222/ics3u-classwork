@@ -200,4 +200,4 @@ while score < 100:
                         print()
 
 print(f"Completion Score: {score}/100")
-print("WOWYou have completed all the mini games, GREAT JOB!")
+print("WOW! You have completed all the mini games, GREAT JOB!")
