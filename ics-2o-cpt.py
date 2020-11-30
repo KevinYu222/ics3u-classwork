@@ -191,6 +191,7 @@ while score < 100:
                                         print("Congratulations! You completed the challenge!")
                                         print("+ 25")
                                         score += 25
+                                        reward[game - 1] = 0
                                     else:
                                         print("You have already completed the challenge before.")
                                     break
