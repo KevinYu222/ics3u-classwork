@@ -11,21 +11,12 @@ def average(a: int, b: int) -> int:
 
 # 4
 def biggest(a: int, b: int, c: int) -> int:
-    if a > b and a > c:
+    if a >= b and a >= c:
         return a
-    elif b > c and b > a:
+    elif b >= c and b >= a:
         return b
-    elif c > a and c > b:
-        return c
     else:
-        if a == b and b == c:
-            return a, b, c
-        elif a == c and a > b:
-            return a, c
-        elif a == b and a > c:
-            return a, b
-        else:
-            return b,c
+        return c
 
 # 5
 def first_two(word: str) -> str:
