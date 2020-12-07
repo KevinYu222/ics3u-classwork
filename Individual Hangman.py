@@ -58,6 +58,16 @@ def get_random_word(word_list: List[str]) -> str:
     return word_list[random.randint]
 
 
+def print_lives_left(remaining: int, out_of: int):
+    """Prints out lives-left info.
+    
+    Args:
+        remaining: Remaining lives left.
+        out_of: How many lives in total you start with.
+    """
+    return f"{remaining} ou of {out_of} lives left."
+
+
 def reveal_letters(word: str, visible_letters: List[str]) -> str:
     """Reveal the given letters in a hidden word.
     
