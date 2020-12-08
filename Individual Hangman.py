@@ -55,7 +55,7 @@ def get_random_word(word_list: List[str]) -> str:
     Returns:
         A single word.
     """
-    return word_list[random.randint]
+    return random.choice(word_list)
 
 
 def print_lives_left(remaining: int, out_of: int):
@@ -65,7 +65,7 @@ def print_lives_left(remaining: int, out_of: int):
         remaining: Remaining lives left.
         out_of: How many lives in total you start with.
     """
-    return f"{remaining} ou of {out_of} lives left."
+    return f"{remaining} out of {out_of} lives left."
 
 
 def reveal_letters(word: str, visible_letters: List[str]) -> str:
@@ -106,7 +106,8 @@ def calc_attempts_remaining(attempts_allowed: int, incorrect: List[str]) -> int:
     Returns:
         How many remaining guesses the player has.
     """
-    return f"{attempts_allowed - len(incorrect)} guesses left"
+    remain = attempts_allowed - len(incorrect)
+    return remain
 
 
 def word_reveal_message(word: str) -> str:
@@ -121,7 +122,7 @@ def word_reveal_message(word: str) -> str:
     Example: 
         "The secret word was 'orange'."
     """
-    return f"The secret word was {word}."
+    return f"The secret word was '{word}'."
 
 
 def outcome_message(result: str) -> str:
@@ -155,7 +156,7 @@ def get_guess(all_guesses: List[str]) -> str:
     """
     proper_guess = False
     while proper_guess == False:
-        guess = input("Guess a letter: ")
+        guess = input("Guess a letter: ").lower()
         if guess not in all_guesses and len(guess) == 1 and guess.isalpha():
             return guess
         elif guess in all_guesses:
