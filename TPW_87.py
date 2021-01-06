@@ -1,10 +1,14 @@
 def main():
     string = input("Please Enter a String: ")
-    try:
-        width = int(input(" Please Enter Length of the Width: "))
-    except ValueError:
-        print("Invalid, Please Enter a number.")
-    center_string(string, width)
+    while True:
+        try:
+            width = int(input("Please Enter Length of the Width: "))
+            if width < len(string):
+                raise ValueError
+            break
+        except ValueError:
+            print("Invalid, Please Enter a number.")
+    print(center_string(string, width))
 
 def center_string(string: str, width: int):
     spaces = round((width - len(string))/2)
